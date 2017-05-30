@@ -21,7 +21,7 @@ function getUrlConnection() {
     return 'mongodb://'
         + db.usuario + ':'
         + db.senha
-        +'@ds155841.mlab.com:55841/mean-delta';
+        +'@ds155841.mlab.com:55841/meandelta';
 }
 
 module.exports = MongoDBConnection();
