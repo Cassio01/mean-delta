@@ -9,7 +9,7 @@ import {HttpClientService} from "../http-client.service";
 })
 export class MapPageComponent {
 
-    localizacao: any = new Localizacao();
+    localizacao: Localizacao = new Localizacao();
 
     constructor(private httpClient: HttpClientService) {
     }
@@ -23,5 +23,7 @@ export class MapPageComponent {
                 console.log(localizacao);
             });
     }
+    ngOnInit() {
 
+    }
 }

@@ -18,11 +18,12 @@
         <div class="col-md-1">
             <span>Hora:</span>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2" align="center">
             <span>Ações:</span>
         </div>
     </div>
     <div class="row" *ngFor="let loc of historico;">
+
         <div class="col-md-2">
             <span>{{loc.dominio}}</span>
         </div>
@@ -41,11 +42,9 @@
         <div class="col-md-1">
             <span>{{loc.dataHora | date: 'HH:mm:ss'}}</span>
         </div>
-        <div class="col-md-1">
-            <button type="button" class="btn btn-primary">Consultar</button>
-        </div>
-        <div class="col-md-1">
-            <button type="button" class="btn btn-danger">Excluir</button>
+        <div class="col-md-2">
+            <button type="button" (click)="consultar(loc.query)" class="btn btn-primary" >Consultar</button>
+            <button type="button" (click)="exlcuir(loc)" class="btn btn-danger">Excluir</button>
         </div>
     </div>
 </div>

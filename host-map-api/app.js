@@ -5,6 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var index = require('./routes/index');
+var users = require('./routes/users');
+
 var app = express();
 
 // view engine setup
@@ -29,6 +32,8 @@ app.use(function (req, res, next) {
 
 let localizacaoRoute = require('./routes/localizacao.route');
 
+app.use('/', index);
+app.use('/users', users);
 app.use('/api/localizacao', localizacaoRoute);
 
 let connection = require('./config/connection');
